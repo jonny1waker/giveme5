@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: about
+  name: lucky
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: about
+      app: lucky
   template:
     metadata:
       labels:
-        app: about
+        app: lucky
     spec:
       containers:
-      - image: okteto.dev/about:latest
-        name: about
+      - image: okteto.dev/lucky:latest
+        name: lucky
         ports:
         - containerPort: 8080
         env:
